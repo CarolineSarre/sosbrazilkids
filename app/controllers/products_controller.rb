@@ -14,16 +14,20 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
+    authorize_resource
     @product = Product.new
   end
 
   # GET /products/1/edit
   def edit
+    authorize_resource
+
   end
 
   # POST /products
   # POST /products.json
   def create
+    authorize_resource
     @product = Product.new(product_params)
 
     respond_to do |format|
@@ -40,6 +44,7 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
+  authorize_resource
     respond_to do |format|
       if @product.update(product_params)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
@@ -54,6 +59,7 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
+  authorize_resource
     @product.destroy
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
