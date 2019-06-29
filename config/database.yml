@@ -13,9 +13,9 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: 1234
-  socket: /var/run/mysqld/mysqld.sock
+  username: b1d95b87e36f0c
+  password: 8933663b
+  host: mysql://b1d95b87e36f0c:8933663b@us-cdbr-iron-east-02.cleardb.net/heroku_1c5e0b90f59bcfd?reconnect=true
 
 development:
   <<: *default
