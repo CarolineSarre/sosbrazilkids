@@ -1,3 +1,141 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.login {
+  background-image: url(asset-path('bg-padrao.jpg'));
+  background-size: cover;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background: rgba($color: #000000, $alpha: 0.5)
+  }
+}
+
+.logo {
+  width: 240px;
+}
+
+#actionBox {
+  width: 370px;
+  height: auto;
+  background: #007251;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  margin-top: 100px;
+  .boxHeader {
+    margin-bottom:20px;
+    ul {
+      width:100%;
+      padding: 0;
+      margin:0;
+      li {
+        box-sizing: border-box;
+        width: 49%;
+        text-align:center;
+        padding: 30px;
+        font-weight: bold;
+        display: inline-block;
+        background: #01452E;
+        a {
+          text-decoration: none;
+          color:white;
+        }
+      }
+      .active {
+          background: #007251;
+        }
+    }
+  }
+  .boxBody {
+    text-align: center;
+    form {
+      width: 80%;
+      margin: 20px auto;
+      text-align: left;
+      color: white;
+      font-weight: light;
+      label {
+        display: block;
+        width: 100%;
+        font-size:12px;
+        margin-bottom: 15px;
+        input {
+          box-sizing: border-box;
+          display: block;
+          margin-top: 5px;
+          width: 100%;
+          border: none;
+          padding: 5px;
+          border-radius: 3px;
+          color: black;
+        }
+      }
+      .half {
+        display: inline-block;
+        width: 49%;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      button {
+        width: 100%;
+        height: 30px;
+        border: none;
+        margin-top: 20px;
+        border-radius: 4px;
+        background: #01452E;
+        color:#FADE05;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.obrigado {
+  h1 {
+    font-size: 34px;
+    font-weight: 300;
+    margin-top: 20px;
+    color: #fade05;
+    margin-bottom: 30px;
+    strong {
+      font-weight: 900
+    }
+  }
+}
+
+.btn-white {
+  width: 100%;
+  height: 30px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 4px;
+  background: white;
+  color: #01452E;
+  text-transform: uppercase;
+  padding: 10px;
+  text-decoration: none;
+  font-weight:bold;
+  &:hover{
+    padding: 12px;
+  }
+}
