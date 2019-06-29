@@ -1,3 +1,26 @@
 // Place all the styles related to the order controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.fundoverde{
+    background: #007251;
+    width:920px;
+    padding: 20px;
+    margin: 20px auto;
+
+    legend{
+        font-size: 15pt;
+        color: white;
+    }
+    p,label{
+        font-size: 10pt;
+        color:white;
+    }
+   
+}
+.doacao{
+    margin: 5px 25px;
+}
+.row{
+    font-size: 20pt;
+  
+}
