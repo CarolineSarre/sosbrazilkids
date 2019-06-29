@@ -4,12 +4,14 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    load_and_authorize_resource
     @users = User.all
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    load_and_authorize_resource
   end
 
   # GET /users/new
@@ -19,6 +21,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    load_and_authorize_resource
   end
 
   # POST /users
@@ -28,7 +31,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to @home, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -40,6 +43,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    load_and_authorize_resource
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
@@ -54,6 +58,7 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
+    load_and_authorize_resource
     @user.destroy
     respond_to do |format|
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }

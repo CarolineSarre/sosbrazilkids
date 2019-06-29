@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_28_220218) do
+ActiveRecord::Schema.define(version: 2019_06_28_231249) do
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "product_id"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2019_06_28_220218) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "phone"
-    t.boolean "isadmin"
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
