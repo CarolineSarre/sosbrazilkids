@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
-  skip_before_action :authenticate_user!, :only => :index
+  before_action :authenticate_user!
+  !skip_before_action :authenticate_user!, :only => :index
 
   def index
     @products = Product.all
