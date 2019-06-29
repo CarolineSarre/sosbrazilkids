@@ -95,7 +95,7 @@ class OrderController < ApplicationController
      puts "      email: #{payment.sender.email}"
      puts "      phone: (#{payment.sender.phone.area_code}) #{payment.sender.phone.number}"
      puts "      document: #{payment.sender.document}: #{payment.sender.document}"
-     render plain: "Sucesso, seu pagamento será processado :)"
+     redirect_to '/static_pages/obrigado'
     end
 
   end
