@@ -15,7 +15,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: b1d95b87e36f0c
   password: 8933663b
-  host: mysql://b1d95b87e36f0c:8933663b@us-cdbr-iron-east-02.cleardb.net/heroku_1c5e0b90f59bcfd?reconnect=true
+  socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
@@ -51,4 +51,5 @@ production:
   <<: *default
   database: sosbrazil_production
   username: sosbrazil
-  password: <%= ENV['SOSBRAZIL_DATABASE_PASSWORD'] %>
+  url: <%= ENV['CLEARDB_DATABASE_URL'] %>
+  password: <%= ENV['CLEARDB_DATABASE_URL'] %>
